@@ -69,7 +69,7 @@ def main():
     #test_image = 'comic.png'
 
     sf = 4                     # scale factor, only from {1, 2, 3, 4}
-    show_img = False           # default: False
+    show_img = True           # default: False
     save_E = True              # save estimated image
     save_LE = True             # save zoomed LR, Estimated images
 
