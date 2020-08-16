@@ -46,6 +46,7 @@ RUN conda install -y -c pytorch \
     "pytorch=1.4.0=py3.6_cuda10.1.243_cudnn7.6.3_0" \
     "torchvision=0.5.0=py36_cu101" \
     opencv \
+    scipy \
  && conda clean -ya
  
 # Set the default command to python3
