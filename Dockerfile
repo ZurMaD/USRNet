@@ -17,9 +17,6 @@ RUN apt-get update && apt-get install -y \
     libx11-6 \
  && rm -rf /var/lib/apt/lists/*
 
-# Download the models
-RUN bash ./download_models.bash
-
 # Create a working directory
 RUN mkdir /app
 WORKDIR /app
