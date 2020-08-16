@@ -14,11 +14,7 @@ RUN apt-get update && apt-get install -y \
     git \
     bzip2 \
     libx11-6 \
-    python3-pip\
  && rm -rf /var/lib/apt/lists/*
-
-# INSTALL requirements 
-RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Create a working directory
 RUN mkdir /app
@@ -49,6 +45,7 @@ RUN conda install -y -c pytorch \
     cudatoolkit=10.1 \
     "pytorch=1.4.0=py3.6_cuda10.1.243_cudnn7.6.3_0" \
     "torchvision=0.5.0=py36_cu101" \
+    opencv \
  && conda clean -ya
  
 # Set the default command to python3
