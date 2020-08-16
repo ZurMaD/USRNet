@@ -45,8 +45,10 @@ RUN conda install -y -c pytorch \
     cudatoolkit=10.1 \
     "pytorch=1.4.0=py3.6_cuda10.1.243_cudnn7.6.3_0" \
     "torchvision=0.5.0=py36_cu101" \
-    "opencv=4.4.0.40"\
  && conda clean -ya
+
+# INSTALL requirements 
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Set the default command to python3
 CMD ["python3"]
