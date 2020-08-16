@@ -6,6 +6,24 @@ _[Computer Vision Lab](https://vision.ee.ethz.ch/the-institute.html), ETH Zurich
 
 [[Training code --> KAIR](https://github.com/cszn/KAIR)]
 
+
+# How to use USRNet+Docker
+
+```
+# Clone the repo
+git clone https://github.com/ZurMaD/USRNet
+
+# Clone the download
+bash ./USRNet/download_models.bash
+
+# Use the docker image
+docker run --rm -it --init \
+  --gpus=all \
+  --ipc=host \
+  --user="$(id -u):$(id -g)" \
+  --volume="$PWD:/app" \
+  anibali/pytorch python3 main_test_realapplication.py
+```
 ___________
 
 * [Classical SISR degradation model](#classical-sisr-degradation-model)
