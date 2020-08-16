@@ -47,6 +47,7 @@ RUN conda install -y -c pytorch \
     "torchvision=0.5.0=py36_cu101" \
  && conda clean -ya
 
+RUN ls
 # INSTALL requirements 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
