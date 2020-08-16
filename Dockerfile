@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # Download the models
-RUN bash download_models.bash
+RUN bash ./download_models.bash
 
 # Create a working directory
 RUN mkdir /app
