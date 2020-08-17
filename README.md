@@ -22,7 +22,7 @@ docker run --rm -it --init \
   --ipc=host \
   --user="$(id -u):$(id -g)" \
   --volume="$PWD:/app" \
-  anibali/pytorch python3 main_test_realapplication.py
+  pablogod/usrnet python3 main_test_bicubic.py
 ```
 ___________
 
